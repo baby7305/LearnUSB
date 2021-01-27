@@ -19,5 +19,9 @@ link_directories(${THIRD_PARTY_DIR}/VS2019/MS64/dll)
 add_executable(testlibusb
     testlibusb.c
 )
+add_executable(listdevs
+        listdevs.c
+        )
 
 target_link_libraries(testlibusb libusb-1.0)
+target_link_libraries(listdevs libusb-1.0)
