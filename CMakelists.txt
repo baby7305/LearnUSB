@@ -22,6 +22,10 @@ add_executable(testlibusb
 add_executable(listdevs
         listdevs.c
         )
+add_executable(xusb
+        xusb.c
+        )
 
 target_link_libraries(testlibusb libusb-1.0)
 target_link_libraries(listdevs libusb-1.0)
+target_link_libraries(xusb libusb-1.0)
