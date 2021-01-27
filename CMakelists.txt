@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.0)
 
-project(LearnUSB VERSION 1.0.0 LANGUAGES CXX)
+project(LearnUSB VERSION 1.0.0 LANGUAGES CXX C)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,6 +10,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
+
+set(THIRD_PARTY_DIR "E:\\usb\\binary")
+
+include_directories(${THIRD_PARTY_DIR}/include/libusb-1.0)
+link_directories(${THIRD_PARTY_DIR}/VS2019/MS64/dll)
 
 add_executable(helloworld
     mainwindow.ui
