@@ -16,11 +16,8 @@ set(THIRD_PARTY_DIR "E:\\usb\\binary")
 include_directories(${THIRD_PARTY_DIR}/include/libusb-1.0)
 link_directories(${THIRD_PARTY_DIR}/VS2019/MS64/dll)
 
-add_executable(helloworld
-    mainwindow.ui
-    mainwindow.cpp
-    main.cpp
-    resources.qrc
+add_executable(testlibusb
+    testlibusb.c
 )
 
-target_link_libraries(helloworld PRIVATE Qt6::Widgets)
+target_link_libraries(testlibusb libusb-1.0)
